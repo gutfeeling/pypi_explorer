@@ -3,11 +3,10 @@
 
 ### Description
 
-Ever wanted to explore the Python Package Index? If yes, this repository will get you started quickly. It includes scripts for
-downloading the metadata of all packages in PyPI, functions for extracting important pieces of information from this metadata
+This repository includes scripts for downloading the metadata of all packages in PyPI, functions for extracting important pieces of information from this metadata
 and lots more. 
 
-Recently, I have used it to analyze Python 3 support of packages in PyPI.
+Recently, I have used it to analyze [Python 3 support of packages in PyPI](pypi_database/analysis.ipynb).
 
 ### Setup
 
@@ -180,7 +179,4 @@ Development Status :: 4 - Beta
 >>>
 ```
 
-### Analysis of Python 3 support for actively developed production ready packages
-
-This example jupyter notebook analyzes Python 3 support for actively developed, production ready packages using the
-data in the database. You can use it as a starting point or inspiration for your exploration of PyPI.
+### Now that you have the data, let your imagination run free. All the best!
