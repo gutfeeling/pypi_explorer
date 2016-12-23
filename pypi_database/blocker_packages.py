@@ -25,10 +25,11 @@ if __name__ == "__main__":
         last_release_size_source = None).filter(
         last_release_size_source__gt = 100000)
 
-    csv_data = [["Package Name", "Keywords"]]
+    csv_data = [["Package Name", "Last Release Date", "Keywords"]]
 
     for package in blocker_packages.order_by("-total_downloads"):
-        csv_data.append([package.name, package.keywords])
+        csv_data.append([package.name, package.last_release_date,
+            package.keywords])
 
     csv_file = "blocker_packages_2016.csv"
     with open(csv_file, "w") as output:
