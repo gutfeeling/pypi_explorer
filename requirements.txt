@@ -1,0 +1,7 @@
+Django==1.10.4
+arrow==0.10.0
+beautifulsoup4==4.5.1
+django-extensions==1.7.5
+jupyter==1.0.0
+matplotlib==1.5.3
+requests==2.12.4
