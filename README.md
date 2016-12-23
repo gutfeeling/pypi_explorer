@@ -180,4 +180,4 @@ Development Status :: 4 - Beta
 ```
 
 ### Now that you have the data, let your imagination run free. 
-If you are looking for inspiration, check out this [ipython notebook](pypi_database/analysis.ipynb)
+If you are looking for examples, check out this [ipython notebook](pypi_database/analysis.ipynb)
