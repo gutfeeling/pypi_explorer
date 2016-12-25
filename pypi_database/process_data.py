@@ -10,7 +10,8 @@ from packages.models import Package
 from package_info.models import PackageInfo
 from data_helpers import (has_classifiers, package_is_python3_compatible,
     get_total_downloads, get_last_release_date, get_last_release_size_source,
-    get_last_release_size_wheel, get_development_status, get_keywords)
+    get_last_release_size_wheel, get_development_status, get_keywords,
+    get_first_release_date, package_has_python2_classifier)
 
 if __name__ == "__main__":
     PackageInfo.objects.all().delete()
@@ -28,7 +29,10 @@ if __name__ == "__main__":
             last_release_size_wheel = get_last_release_size_wheel(
                 metadata_json),
             development_status = get_development_status(metadata_json),
-            keywords = get_keywords(metadata_json))
+            keywords = get_keywords(metadata_json),
+            first_release_date = get_first_release_date(metadata_json),
+            python2_classifier_present = package_has_python2_classifier(
+                metadata_json))
 
         package_info_list.append(new_package_info)
 

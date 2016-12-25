@@ -55,3 +55,21 @@ def has_classifiers(metadata_json):
 
 def get_keywords(metadata_json):
     return metadata_json["info"]["keywords"]
+
+def package_has_python2_classifier(metadata_json):
+    for entry in metadata_json["info"]["classifiers"]:
+        if re.search("Python :: 2", entry) is not None:
+            return True
+    return False
+
+def get_first_release_date(metadata_json):
+    releases = metadata_json["releases"]
+    dates = []
+    for key in releases:
+        try:
+            dates.append(arrow.get(releases[key][0]["upload_time"]))
+        except IndexError:
+            pass
+    if dates == []:
+        return None
+    return min(dates).datetime.date()    
